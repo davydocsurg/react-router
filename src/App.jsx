@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "./logo.svg";
 import { Outlet, NavLink } from "react-router-dom";
-import { useLocation, NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
