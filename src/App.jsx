@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "./logo.svg";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +16,7 @@ function App() {
               paddingBottom: "1rem",
             }}
           >
-            <Link
+            <NavLink
               className={
                 ("text-decoration-none",
                 ({ isActive }) =>
@@ -25,9 +25,9 @@ function App() {
               to="/invoices"
             >
               Invoices{" "}
-            </Link>
+            </NavLink>
             |{" "}
-            <Link
+            <NavLink
               className={
                 ("text-decoration-none",
                 ({ isActive }) =>
@@ -36,7 +36,7 @@ function App() {
               to="/expenses"
             >
               Expenses
-            </Link>
+            </NavLink>
           </nav>
         </header>
         <Outlet />
