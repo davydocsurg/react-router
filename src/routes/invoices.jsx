@@ -33,7 +33,7 @@ export default function Invoices() {
             return name.startsWith(filter.toLowerCase());
           })
           .map((invoice) => (
-            <NavLink
+            <QueryNavLink
               style={({ isActive }) => {
                 return {
                   display: "block",
@@ -53,7 +53,7 @@ export default function Invoices() {
               >
                 {invoice.name}
               </span>
-            </NavLink>
+            </QueryNavLink>
           ))}
       </nav>
       <Outlet />

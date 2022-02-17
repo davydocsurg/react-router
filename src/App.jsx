@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "./logo.svg";
 import { Outlet, NavLink } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,11 @@ function App() {
       </div>
     </>
   );
+}
+
+function QueryNavLink({ to, ...props }) {
+  let location = useLocation();
+  return <NavLink to={to + location.search} {...props} />;
 }
 
 export default App;
