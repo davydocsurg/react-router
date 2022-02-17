@@ -1,12 +1,12 @@
 import { useState } from "react";
 import logo from "./logo.svg";
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className="mx-auto">
       <header className="App-header">
         <h1 className="text-center">Hello World!</h1>
         <nav
@@ -19,6 +19,7 @@ function App() {
           <Link to="/expenses">Expenses</Link>
         </nav>
       </header>
+      <Outlet />
     </div>
   );
 }
