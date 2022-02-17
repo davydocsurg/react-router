@@ -1,5 +1,11 @@
 import { NavLink, Outlet, useSearchParams } from "react-router-dom";
 import { getInvoices } from "../api/data";
+import { useLocation } from "react-router-dom";
+
+function QueryNavLink({ to, ...props }) {
+  let location = useLocation();
+  return <NavLink to={to + location.search} {...props} />;
+}
 
 export default function Invoices() {
   let invoices = getInvoices();
