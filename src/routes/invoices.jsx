@@ -48,7 +48,7 @@ export default function Invoices() {
                 className={
                   ("text-decoration-none",
                   ({ isActive }) =>
-                    isActive ? "text-success" : "text-primary")
+                    isActive ? "text-success font-weight-bold" : "text-primary")
                 }
               >
                 {invoice.name}
