@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { getInvoices } from "../data";
+import { getInvoices } from "../api/data";
 
 export default function Invoices() {
   let invoices = getInvoices();
